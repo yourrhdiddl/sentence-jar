@@ -17,7 +17,7 @@
 | 4 | ZIP 파일 업로드 (`store/` 제외, `manifest.json` 이 ZIP 맨 위) | ☐ 직접 |
 | 5 | 스토어 등록정보: 설명, 카테고리, 언어, 아이콘, 스크린샷 | ✅ 아래 1장 |
 | 6 | 한국어 등록정보 (설명, 스크린샷) | ✅ 아래 1장 |
-| 7 | 개인정보 보호: 단일 목적, 권한 사유, 원격 코드, 데이터 사용, 방침 URL | ✅ 아래 2장 |
+| 7 | 개인정보 보호: 전용 목적, 권한 요청 이유, 원격 코드, 데이터 사용, 방침 URL | ✅ PRIVACY-TAB.md |
 | 8 | 배포: 공개 범위, 지역 | ✅ 아래 3장 |
 | 9 | 정책 위반 요소 점검 | ✅ 아래 4장 |
 
@@ -146,60 +146,15 @@ Sentence Jar 는 웹페이지에서 간직하고 싶은 문장을 모아 두는 
 
 ## 2. 개인정보 보호 (Privacy practices)
 
-### 2-1. 단일 목적 (Single purpose)
+입력할 내용 전체(영어·한국어)는 **[PRIVACY-TAB.md](PRIVACY-TAB.md)** 에 따로 정리했습니다. 요약:
 
-**English**
-```
-Sentence Jar lets users save text they select on a web page, then search, copy and manage those saved sentences in a popup.
-```
-**한국어 (참고용, 대시보드에는 영어로 입력)**
-```
-사용자가 웹페이지에서 선택한 문장을 저장하고, 팝업에서 검색·복사·관리할 수 있게 합니다.
-```
-
-### 2-2. 권한 사용 이유 (Permission justification)
-
-| 권한 | English (대시보드 입력) | 한국어 (참고) |
-|---|---|---|
-| `contextMenus` | `Adds a "Save to Sentence Jar" item to the right-click menu, shown only when text is selected. This is the only way the user saves a sentence.` | 글자를 선택했을 때만 우클릭 메뉴에 저장 항목을 추가합니다. 문장을 저장하는 유일한 방법입니다. |
-| `storage` | `Stores the user's saved sentences (text, source page URL and title, date) and their light/dark theme choice locally on the device with chrome.storage.local. Nothing is sent off the device.` | 저장한 문장(내용, 원래 페이지 주소와 제목, 날짜)과 테마 선택을 기기 안에만 보관합니다. 밖으로 보내지 않습니다. |
-
-호스트 권한(`host_permissions`)과 콘텐츠 스크립트는 쓰지 않으므로 적을 것이 없습니다.
-
-### 2-3. 원격 코드 (Remote code)
-
-```
-No, I am not using remote code.
-```
-아니요. 모든 코드가 ZIP 안에 있고, 바깥에서 스크립트를 불러오지 않습니다.
-
-### 2-4. 데이터 사용 (Data usage)
-
-기기 안에만 저장해도 **"다루는(handle)" 데이터는 공개해야 합니다.** 그래서 아래처럼 체크합니다.
-
-| 항목 | 체크 | 이유 |
-|---|---|---|
-| Website content (웹사이트 콘텐츠) | ☑ | 사용자가 고른 페이지 문장, 페이지 제목을 저장 |
-| Web browsing activity (웹 기록) | ☑ | 문장이 있던 페이지 주소(URL)를 함께 저장 |
-| 그 밖의 항목 (개인 식별 정보, 금융, 건강, 인증, 위치, 개인 통신, 사용자 활동) | ☐ | 다루지 않음 |
-
-URL 저장을 웹 기록으로 볼지는 해석이 갈릴 수 있습니다. 덜 공개해서 반려되는 것보다 더 공개하는 편이 안전해서 함께 체크했습니다.
-
-아래 세 가지 확인 항목은 **모두 체크** 합니다.
-
-| English (대시보드 문구) | 한국어 |
+| 항목 | 요약 |
 |---|---|
-| I do not sell or transfer user data to third parties, outside of the approved use cases | 승인된 용도 외에 사용자 데이터를 제3자에게 팔거나 넘기지 않습니다 |
-| I do not use or transfer user data for purposes that are unrelated to my item's single purpose | 단일 목적과 관계없는 용도로 사용자 데이터를 쓰거나 넘기지 않습니다 |
-| I do not use or transfer user data to determine creditworthiness or for lending purposes | 신용 평가나 대출 목적으로 사용자 데이터를 쓰거나 넘기지 않습니다 |
-
-### 2-5. 개인정보처리방침 URL (Privacy policy)
-
-사용자 데이터를 다루므로 **필수** 입니다. 영어와 한국어를 한 문서에 담았습니다.
-
-```
-https://github.com/yourrhdiddl/sentence-jar/blob/main/PRIVACY.md
-```
+| 전용 목적 | 선택한 문장을 저장하고 팝업에서 검색·복사·관리 |
+| 권한 요청 이유 | `contextMenus`: 문장을 고르면 우클릭 메뉴에 저장 항목 추가 · `storage`: 문장과 테마를 기기 안에만 보관 |
+| 원격 코드 | 없음 (No, I am not using remote code) |
+| 사용자 데이터 | 웹사이트 콘텐츠, 웹 기록 체크 · 확인 항목 3개 모두 체크 |
+| 개인정보처리방침 | https://github.com/yourrhdiddl/sentence-jar/blob/main/PRIVACY.md |
 
 ---
 
@@ -233,7 +188,7 @@ https://github.com/yourrhdiddl/sentence-jar/blob/main/PRIVACY.md
 | 오해를 부르는 표현 | ✅ "최고", "1위", "Editor's Choice" 같은 표현 없음 |
 | 스크린샷이 실제 화면과 같음 | ✅ v1.0.0 실제 팝업으로 촬영 |
 | 다른 상표·이름 사칭 | ✅ 겹치는 이름 없음 (제출 전 재확인) |
-| 데이터 공개와 방침 일치 | ✅ 2-4 체크 항목과 `PRIVACY.md` 내용이 같음 |
+| 데이터 공개와 방침 일치 | ✅ PRIVACY-TAB.md 4장 체크 항목과 `PRIVACY.md` 내용이 같음 |
 | 시험판 표시 | 해당 없음 (시험판을 따로 올릴 때만 이름 끝에 `BETA` 표시) |
 
 ### 4-3. ZIP 만들기

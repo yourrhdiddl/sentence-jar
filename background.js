@@ -1,4 +1,4 @@
-// My Sentences - 백그라운드 서비스 워커
+// Sentence Jar - 백그라운드 서비스 워커
 // 오른쪽 클릭 메뉴를 만들고, 고른 문장을 chrome.storage.local 에 저장한다.
 
 const MENU_ID = "save-sentence";
@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.removeAll(() => {
     chrome.contextMenus.create({
       id: MENU_ID,
-      title: "Save to My Sentences",
+      title: "Save to Sentence Jar",
       contexts: ["selection"] // 글자를 드래그했을 때만 메뉴가 보인다
     });
   });
@@ -44,7 +44,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     showBadge(exists ? "Dup" : "OK", exists ? "#8e8aa8" : "#7c5cff");
   } catch (err) {
     // 저장 공간이 꽉 찼거나 저장에 실패하면, 조용히 넘어가지 않고 아이콘에 "!"를 띄운다.
-    console.error("My Sentences: save failed", err);
+    console.error("Sentence Jar: save failed", err);
     showBadge("!", "#e11d48", 3000);
   }
 });

@@ -5,10 +5,12 @@
 ## 1. 앱 이름
 
 ```
-My Sentences
+Sentence Jar
 ```
 
 `manifest.json` 의 `name` 과 같아야 합니다 (최대 75자).
+
+이름을 정할 때 웹과 Chrome 웹 스토어에서 같은 이름의 확장 프로그램이 있는지 검색했고, "Sentence Jar" 는 찾지 못했습니다. ("My Sentences" 는 비슷한 이름 "Sentences For Me" 가 이미 있어서 바꿨습니다.)
 
 ## 2. 설명 문구
 
@@ -23,9 +25,9 @@ Save sentences you love from any web page with one right-click.
 ### 자세한 설명 (Description) — 영어
 
 ```
-Found a line worth keeping? Select it, right-click, and choose "Save to My Sentences". That's it.
+Found a line worth keeping? Select it, right-click, and choose "Save to Sentence Jar". That's it.
 
-My Sentences is a quiet place for the sentences that stop you while you read: a line from an essay, a quote in an article, a thought in a blog post.
+Sentence Jar is a quiet place for the sentences that stop you while you read: a line from an essay, a quote in an article, a thought in a blog post.
 
 WHAT YOU CAN DO
 • Save any selected text from the right-click menu
@@ -40,7 +42,7 @@ PRIVATE BY DESIGN
 Your sentences are stored only on this device (chrome.storage.local). Nothing is sent to any server, and there are no accounts, ads or trackers.
 
 TIP
-Pin My Sentences to the toolbar (puzzle icon → pin) so you can see the OK badge after each save.
+Pin Sentence Jar to the toolbar (puzzle icon → pin) so you can see the OK badge after each save.
 
 Contact: yourrhdiddl@gmail.com
 ```
@@ -48,9 +50,9 @@ Contact: yourrhdiddl@gmail.com
 ### 자세한 설명 — 한국어 (한국어 등록 정보를 따로 추가할 때)
 
 ```
-간직하고 싶은 문장을 찾았나요? 드래그하고, 우클릭해서 "Save to My Sentences"를 누르면 끝입니다.
+간직하고 싶은 문장을 찾았나요? 드래그하고, 우클릭해서 "Save to Sentence Jar"를 누르면 끝입니다.
 
-My Sentences는 글을 읽다가 마음에 멈춘 문장을 모아 두는 조용한 공간입니다.
+Sentence Jar는 글을 읽다가 마음에 멈춘 문장을 모아 두는 조용한 공간입니다.
 
 할 수 있는 일
 • 웹페이지에서 고른 문장을 우클릭 메뉴로 저장
@@ -65,7 +67,7 @@ My Sentences는 글을 읽다가 마음에 멈춘 문장을 모아 두는 조용
 문장은 이 기기에만 저장되며(chrome.storage.local) 어떤 서버로도 보내지 않습니다. 회원가입, 광고, 추적 기능이 없습니다.
 
 팁
-툴바의 퍼즐 아이콘에서 My Sentences 를 고정하면 저장할 때마다 OK 배지를 볼 수 있습니다.
+툴바의 퍼즐 아이콘에서 Sentence Jar 를 고정하면 저장할 때마다 OK 배지를 볼 수 있습니다.
 
 문의: yourrhdiddl@gmail.com
 ```
@@ -95,7 +97,7 @@ Save text the user selects on a web page and let them search, copy and manage th
 
 | 권한 | 이유 |
 |---|---|
-| `contextMenus` | Adds the "Save to My Sentences" item to the right-click menu when text is selected. |
+| `contextMenus` | Adds the "Save to Sentence Jar" item to the right-click menu when text is selected. |
 | `storage` | Keeps the saved sentences and the light/dark choice on the user's device. |
 
 **원격 코드 사용:** 아니요 (No, I am not using remote code)

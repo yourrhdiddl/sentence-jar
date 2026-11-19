@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "My Sentences",
+  "name": "Sentence Jar",
   "version": "1.0.0",
   "description": "Save sentences you love from any web page with one right-click.",
   "icons": {
@@ -14,7 +14,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "My Sentences",
+    "default_title": "Sentence Jar",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",

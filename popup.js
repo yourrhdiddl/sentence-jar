@@ -1,4 +1,4 @@
-// My Sentences - 팝업 화면
+// Sentence Jar - 팝업 화면
 // 저장한 문장을 보여 주고, 찾기·복사·지우기를 한다.
 
 const STORAGE_KEY = "sentences";
@@ -76,7 +76,7 @@ function render() {
     if (sentences.length === 0) {
       emptyTitleEl.textContent = "No sentences yet";
       emptyTextEl.innerHTML =
-        "Select text on any page, then<br><kbd>Right-click</kbd> → <kbd>Save to My Sentences</kbd>" +
+        "Select text on any page, then<br><kbd>Right-click</kbd> → <kbd>Save to Sentence Jar</kbd>" +
         '<span class="tip">Tip: pin this icon to the toolbar to see <b>OK</b> after each save.</span>';
     } else {
       emptyTitleEl.textContent = "No matches";

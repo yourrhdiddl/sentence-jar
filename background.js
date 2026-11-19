@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.removeAll(() => {
     chrome.contextMenus.create({
       id: MENU_ID,
-      title: "Save to Sentence Jar",
+      title: chrome.i18n.getMessage("menuSave"), // 크롬 언어에 맞춰 _locales 에서 가져온다
       contexts: ["selection"] // 글자를 드래그했을 때만 메뉴가 보인다
     });
   });

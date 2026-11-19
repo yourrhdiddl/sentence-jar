@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Sentence Jar",
+    "description": "Extension name shown in Chrome and the Web Store"
+  },
+  "appDesc": {
+    "message": "Save sentences you love from any web page with one right-click.",
+    "description": "Store summary, 132 characters or fewer"
+  },
+  "menuSave": {
+    "message": "Save to Sentence Jar",
+    "description": "Right-click menu item shown when text is selected"
+  }
+}

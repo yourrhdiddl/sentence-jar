@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Sentence Jar",
+    "description": "크롬과 웹 스토어에 보이는 확장 프로그램 이름"
+  },
+  "appDesc": {
+    "message": "웹페이지에서 마음에 드는 문장을 우클릭 한 번으로 모아 두세요. 검색, 복사, 되돌리기까지 이 기기 안에서.",
+    "description": "스토어 짧은 설명, 132자 이내"
+  },
+  "menuSave": {
+    "message": "Sentence Jar에 저장",
+    "description": "글자를 선택했을 때 보이는 우클릭 메뉴"
+  }
+}

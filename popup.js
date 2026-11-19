@@ -76,7 +76,7 @@ function render() {
     if (sentences.length === 0) {
       emptyTitleEl.textContent = "No sentences yet";
       emptyTextEl.innerHTML =
-        "Select text on any page, then<br><kbd>Right-click</kbd> → <kbd>Save to Sentence Jar</kbd>" +
+        "Select text on any page, then<br><kbd>Right-click</kbd> → <kbd>" + chrome.i18n.getMessage("menuSave") + "</kbd>" +
         '<span class="tip">Tip: pin this icon to the toolbar to see <b>OK</b> after each save.</span>';
     } else {
       emptyTitleEl.textContent = "No matches";
